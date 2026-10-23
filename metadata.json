@@ -1,0 +1,7 @@
+{
+  "name": "Tu CasApp Management Platform",
+  "description": "Plataforma Centralizada de Gestión y Atención Social de Tu CasApp",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
