@@ -32,7 +32,7 @@ export const modules: PlatformModule[] = [
     title: 'Validación',
     imageUrl: 'https://i.ibb.co/F4Y77Vcp/c32daf85-5ef8-487e-96b6-b4e31b69aec2.jpg',
     theme: 'sky',
-    link: 'https://validaciontucasa.netlify.app/',
+    link: 'https://validaciontucasa.vercel.app/',
     status: 'Activo',
   },
   {
