@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#00c2e8"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+
+  <!-- Inner house glyph -->
+  <g filter="url(#shadow)" fill="#ffffff" transform="translate(56, 56) scale(0.78)">
+    <path d="M256 32L32 232h64v224a16 16 0 0 0 16 16h112V336h64v136h112a16 16 0 0 0 16-16V232h64L256 32z"/>
+    <!-- Heart care accent in center -->
+    <path d="M256 160c-28-36-76-24-76 16 0 42 76 96 76 96s76-54 76-96c0-40-48-52-76-16z" fill="#0284c7"/>
+  </g>
+</svg>
