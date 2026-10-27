@@ -130,4 +130,4 @@ export const themeConfig: Record<
 };
 
 export const logoUrl: string =
-  'https://i.ibb.co/0pPMVd6W/1eaf0217-6c91-4128-bbff-5b2c8601173f.jpg';
+  '/assets/aistudio/logo_tu_casa_C-A-S-A_c190c5ff.png';

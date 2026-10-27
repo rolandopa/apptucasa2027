@@ -25,7 +25,7 @@ export default function Header() {
             <img
               src={logoUrl}
               alt="Tu CasApp"
-              className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl object-cover shadow-sm border border-sky-200/50"
+              className="h-9 sm:h-11 w-auto max-w-[160px] object-contain"
             />
             <div className="flex flex-col">
               <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-800">
