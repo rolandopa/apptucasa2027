@@ -1,4 +1,4 @@
-import { X, Smartphone, Download, ShieldCheck, CheckCircle2, ExternalLink } from 'lucide-react';
+import { X, Download, ShieldCheck, CheckCircle2, ExternalLink } from 'lucide-react';
 
 interface APKGuideModalProps {
   isOpen: boolean;
@@ -27,17 +27,19 @@ export default function APKGuideModal({
           <X className="h-5 w-5" />
         </button>
 
-        {/* Header */}
-        <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-50 text-sky-600 border border-sky-200">
-            <Smartphone className="h-6 w-6" />
-          </div>
+        {/* Header with App Logo Preview */}
+        <div className="flex items-center gap-4">
+          <img
+            src="/pwa-192x192.png"
+            alt="Logo Tu CasApp"
+            className="h-14 w-14 rounded-2xl border border-sky-200 shadow-md object-contain bg-white p-1"
+          />
           <div>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-800">
               Instalar o Convertir en APK (Sin Publicidad)
             </h3>
             <p className="text-xs sm:text-sm text-slate-500">
-              Métodos 100% gratuitos, oficiales y limpios de anuncios
+              Con el logo oficial configurado para la pantalla de inicio
             </p>
           </div>
         </div>
@@ -55,10 +57,10 @@ export default function APKGuideModal({
                   1. Instalación Directa en Android / iPhone
                 </h4>
                 <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Esta web ya está programada como PWA (Progressive Web App). En Android (Google Chrome), abre la web, presiona los <strong>tres puntos (⋮)</strong> arriba a la derecha y selecciona <strong>«Instalar aplicación»</strong> o <strong>«Agregar a la pantalla principal»</strong>.
+                  Esta web ya tiene su icono oficial programado. En Android (Google Chrome), abre la web, presiona los <strong>tres puntos (⋮)</strong> arriba a la derecha y selecciona <strong>«Instalar aplicación»</strong> o <strong>«Agregar a la pantalla principal»</strong>.
                 </p>
                 <p className="mt-1 text-xs text-slate-500">
-                  Se instala en tu teléfono exactamente igual que una app descargada de Play Store, con su propio icono, pantalla completa y <strong>0% publicidad</strong>.
+                  Aparecerá en tu pantalla con el logo oficial de Tu CasApp, sin barra de navegación del navegador y <strong>sin publicidad</strong>.
                 </p>
               </div>
             </div>
@@ -69,7 +71,7 @@ export default function APKGuideModal({
                 className="mt-3.5 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition"
               >
                 <Download className="h-4 w-4" />
-                Instalar Ahora en este Dispositivo
+                Instalar Ahora con Logo Oficial
               </button>
             )}
           </div>
@@ -83,25 +85,25 @@ export default function APKGuideModal({
               2. Generar archivo .APK con PWABuilder (De Microsoft)
             </h4>
             <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
-              <strong>PWABuilder</strong> es un proyecto oficial de código abierto de Microsoft que convierte cualquier PWA en un paquete APK o AAB nativo para Android (Trusted Web Activity). No añade anuncios ni marcas de agua.
+              <strong>PWABuilder</strong> detectará automáticamente el logo oficial generado para los iconos de Android (192px y 512px maskable).
             </p>
 
             <ol className="mt-3 space-y-2 text-xs sm:text-sm text-slate-700">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-sky-600 mt-0.5 shrink-0" />
-                <span>Despliega o publica tu web (en tu hosting o dominio, ej. Vercel, Netlify).</span>
+                <span>Despliega o publica tu web (en Vercel, Netlify o tu dominio).</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-sky-600 mt-0.5 shrink-0" />
-                <span>Entra a <strong>pwabuilder.com</strong> y pega la dirección URL de tu web.</span>
+                <span>Entra a <strong>pwabuilder.com</strong> y pega la URL de tu web.</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-sky-600 mt-0.5 shrink-0" />
-                <span>Haz clic en <strong>«Package for Stores»</strong> y selecciona <strong>Android</strong>.</span>
+                <span>Verás que el logo de Tu CasApp ya aparece reconocido en la vista previa del teléfono.</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-sky-600 mt-0.5 shrink-0" />
-                <span>Descarga el paquete que incluye el archivo <strong>.apk</strong> firmado listo para enviar o instalar por WhatsApp, Drive o memoria USB.</span>
+                <span>Haz clic en <strong>«Package for Stores»</strong> &gt; <strong>Android</strong> y descarga tu <strong>.apk</strong> listo para instalar.</span>
               </li>
             </ol>
 
@@ -116,25 +118,6 @@ export default function APKGuideModal({
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </div>
-          </div>
-
-          {/* Method 3: Google Bubblewrap CLI / Android Studio */}
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-200 px-2.5 py-0.5 text-xs font-semibold text-slate-700">
-              Para Desarrolladores
-            </span>
-            <h4 className="mt-2 text-base font-bold text-slate-800">
-              3. Con Bubblewrap de Google o Capacitor
-            </h4>
-            <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Si tienes Node.js y Android Studio en tu computador, puedes usar la herramienta de Google ejecutando:
-            </p>
-            <div className="mt-2 rounded-lg bg-slate-800 p-2.5 text-[11px] sm:text-xs font-mono text-emerald-400">
-              npm i -g @bubblewrap/cli &amp;&amp; bubblewrap init --manifest=URL/manifest.webmanifest
-            </div>
-            <p className="mt-2 text-xs text-slate-500">
-              Genera un APK limpio directamente desde la consola sin intermediarios.
-            </p>
           </div>
         </div>
 
